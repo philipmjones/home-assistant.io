@@ -29,10 +29,13 @@ A quota can be set against the API to avoid exceeding the free credit amount. Se
 Notes:
 
 - Origin and Destination can be the address or the GPS coordinates of the location (GPS coordinates have to be separated by a comma). You can also enter an entity ID that provides this information in its state, an entity ID with latitude and longitude attributes, or zone friendly name (case sensitive).
+- It is not possible to change the origin and destination later. However, you may use helpers here, to provide different values as needed. See also dynamic configuration, below.
 
 ## Manual Polling
 
-Using automatic polling can lead to calls that exceed your API limit, especially when you are tracking multiple travel times using the same API key. To use more granular polling, disable automated polling in your config entry's System Options. To manually trigger a polling request, call the [`homeassistant.update_entity` service](/integrations/homeassistant/#service-homeassistantupdate_entity) as needed, either manually or via automations.
+Using automatic polling can lead to calls that exceed your API limit, especially when you are tracking multiple travel times using the same API key. You can disable or enable automatic polling for each instance of this integration. Under the settings for the integration, select System options and then Enable polling for updates.
+
+If you have disabled automatic polling, you can trigger a polling request by calling the [`homeassistant.update_entity` service](/integrations/homeassistant/#service-homeassistantupdate_entity), either manually or via automations (see example below).
 
 ## Dynamic Configuration
 
