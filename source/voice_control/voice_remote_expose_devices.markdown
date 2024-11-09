@@ -9,7 +9,7 @@ related:
 ---
 
 To be able to control your devices over a voice command, you must expose your entities to Assist.
-This is to avoid that sensitive devices, such as locks and garage doors, can inadvertently be controlled by voice commands.
+This is to prevent sensitive devices, such as locks and garage doors, being inadvertently controlled by voice commands.
 
 ## Exposing your devices to Assist
 
